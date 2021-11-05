@@ -27,13 +27,12 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
-        binding.cardy.setBackgroundResource(R.drawable.bottom_radius)
+        //binding.cardy.setBackgroundResource(R.drawable.bottom_radius)
 
         val auth = FirebaseAuth.getInstance()
         if (auth.currentUser != null){
             startActivity(Intent(this, MainActivity::class.java))
         }
-
         val viewModelProviderFactory = MyViewModelFactory(Application())
         viewModel = ViewModelProvider(this, viewModelProviderFactory).get(MyViewModel::class.java)
 

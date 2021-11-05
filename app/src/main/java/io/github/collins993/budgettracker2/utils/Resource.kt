@@ -1,5 +1,7 @@
 package io.github.collins993.budgettracker2.utils
 
+import io.github.collins993.budgettracker2.models.Income
+
 sealed class Resource<T>(
     val data: T? = null,
     val message: String? = null

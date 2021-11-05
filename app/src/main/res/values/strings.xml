@@ -5,7 +5,45 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_profile">Profile</string>
+    <string name="title_profile">Settings</string>
+    <string name="budget_tracker">Budget Tracker</string>
+    <string name="log_into_your_account">Log into your Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="login">LOGIN</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="signup_here">Signup Here</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="username">Username</string>
+    <string name="select_country">Select Country</string>
+    <string name="register">REGISTER</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="total_income">Total Income</string>
+    <string name="empty">-</string>
+    <string name="empty2">------</string>
+    <string name="add_new_a_income_item">Add new a income item</string>
+    <string name="see_all">see all</string>
+    <string name="total_expenses">Total Expenses</string>
+    <string name="what_did_you_spend_on">What did you spend on ?</string>
+    <string name="add_a_new_income_item">Add a new income Item</string>
+    <string name="select_account">Select Account</string>
+    <string name="save">Save</string>
+    <string name="select_category">Select Category</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="enter_note">Enter Note</string>
+    <string name="add_a_new_expense_item">Add a new expense Item</string>
+    <string name="total_budget">Total Budget</string>
+    <string name="remaining_budget">Remaining Budget</string>
+    <string name="expenses_statistics"><![CDATA[Expenses Statistics >>>]]></string>
+    <string name="reset_your_password">Reset Your Password</string>
+    <string name="enter_your_email_address_and_we_will_send_you_instructions_to_reset_your_password">Enter your email address and we will send you instructions to reset your password.</string>
+    <string name="proceed">Proceed</string>
+    <string name="get_started">Get Started</string>
+    <string name="next">NEXT</string>
+    <string name="track_your_budget">Track your Budget</string>
+    <string name="know_your_expenses">Know your Expenses</string>
+    <string name="welcome">Welcome</string>
 
     <string-array name="expenses_categories">
         <item>Food</item>
@@ -27,7 +65,7 @@
     </string-array>
 
     <string-array name="currency">
-        <item>NGN</item>
+
         <item>USA</item>
         <item>EUR</item>
         <item>CAN</item>
@@ -37,6 +75,41 @@
     <string-array name="accounts">
         <item>Cash</item>
         <item>Account</item>
-        <item>Card</item>
+    </string-array>
+
+    <string-array name="currency_codes">
+        <item>CAD</item>
+        <item>EUR</item>
+        <item>HKD</item>
+        <item>ISK</item>
+        <item>PHP</item>
+        <item>DKK</item>
+        <item>HUF</item>
+        <item>CZK</item>
+        <item>NGN</item>
+        <item>AUD</item>
+        <item>RON</item>
+        <item>SEK</item>
+        <item>IDR</item>
+        <item>INR</item>
+        <item>BRL</item>
+        <item>RUB</item>
+        <item>HRK</item>
+        <item>JPY</item>
+        <item>THB</item>
+        <item>CHF</item>
+        <item>SGD</item>
+        <item>PLN</item>
+        <item>BGN</item>
+        <item>CNY</item>
+        <item>NOK</item>
+        <item>NZD</item>
+        <item>ZAR</item>
+        <item>USD</item>
+        <item>MXN</item>
+        <item>ILS</item>
+        <item>GBP</item>
+        <item>KRW</item>
+        <item>MYR</item>
     </string-array>
 </resources>

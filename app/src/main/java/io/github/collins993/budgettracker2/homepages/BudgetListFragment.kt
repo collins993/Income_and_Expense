@@ -3,6 +3,7 @@ package io.github.collins993.budgettracker2.homepages
 import android.app.Application
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,11 +12,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import io.github.collins993.budgettracker2.R
 import io.github.collins993.budgettracker2.adapter.MyAdapter
 import io.github.collins993.budgettracker2.databinding.BudgetListFragmentBinding
-import io.github.collins993.budgettracker2.databinding.FragmentProfileBinding
 import io.github.collins993.budgettracker2.models.Income
 import io.github.collins993.budgettracker2.utils.Resource
 import io.github.collins993.budgettracker2.viewmodel.MyViewModel
 import io.github.collins993.budgettracker2.viewmodel.MyViewModelFactory
+import java.text.NumberFormat
 
 class BudgetListFragment : Fragment() {
 
@@ -42,34 +43,52 @@ class BudgetListFragment : Fragment() {
             viewModelProviderFactory
         ).get(MyViewModel::class.java)
 
+        viewModel.retrieveUserInfoFromFireStore()
+        viewModel.retrieveIncomeItemFromFireStore()
+        viewModel.retrieveExpenseItemFromFireStore()
+        viewModel.retrieveRemainingBudgetAmount()
 
         setUpRecyclerView()
 
-        viewModel.retrieveIncomeItemFromFireStore()
+        viewModel.getIncomeItem.observe(viewLifecycleOwner, { documents ->
 
-        viewModel.getIncomeItem.observe(viewLifecycleOwner, { response ->
-            when (response) {
-                is Resource.Success -> {
-                    if (response.data != null){
+            recAdapter.differ.submitList(documents)
 
-                        income = ArrayList()
-                        for (document in response.data?.documents!!) {
+        })
 
-                            val toObject = document.toObject(Income::class.java)
-                            income.add(toObject)
-                            recAdapter.differ.submitList(income)
-                        }
+        viewModel.getUserStatus.observe(viewLifecycleOwner, {
 
+            var country = it?.country.toString()
+            binding.countryCode.text = country
+            binding.countryCode2.text = country
 
+        })
+
+        viewModel.totalBudgetStatus.observe(viewLifecycleOwner, { response ->
+
+            response?.let {
+                when(it){
+                    is Resource.Success -> {
+
+                        val format = NumberFormat.getIntegerInstance().format(it.data?.toInt())
+                        binding.amount.text = format
                     }
-
                 }
             }
 
         })
 
+        viewModel.remainingBudgetStatus.observe(viewLifecycleOwner, { response ->
+            response?.let {
+                when(it){
+                    is Resource.Success -> {
+                        val format = NumberFormat.getIntegerInstance().format(it.data?.toInt())
+                        binding.amount2.text = format
+                    }
+                }
+            }
 
-
+        })
 
         return root
     }

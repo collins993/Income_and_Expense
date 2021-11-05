@@ -34,7 +34,7 @@ class ResetPasswordFragment : Fragment(R.layout.fragment_reset_password) {
             if ( validateEmail()){
                 val email = binding.emailAddress.text.toString()
                 viewModel.resetPassword(email)
-                   findNavController().navigate(R.id.action_resetPasswordFragment_to_navigation_profile)
+                   findNavController().navigate(R.id.action_resetPasswordFragment_to_profileSettingsFragment)
                 Toast.makeText(requireActivity(),"Reset Successful", Toast.LENGTH_LONG).show()
             }
             return@setOnClickListener

@@ -6,5 +6,6 @@ data class Income(
     var amount: String? = "",
     var category: String? = "",
     var account: String? = "",
-    var note: String? = ""
+    var note: String? = "",
+    var uid: String? = ""
 )

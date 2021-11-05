@@ -6,11 +6,16 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_home" />
 
-
+    <item
+        android:id="@+id/statisticsFragment2"
+        android:icon="@drawable/ic_statistic"
+        android:title="Statistics" />
 
     <item
-        android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_person"
+        android:id="@+id/profileSettingsFragment"
+        android:icon="@drawable/ic_settings"
         android:title="@string/title_profile" />
+
+
 
 </menu>

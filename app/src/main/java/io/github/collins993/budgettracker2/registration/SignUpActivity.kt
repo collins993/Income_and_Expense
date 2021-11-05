@@ -12,7 +12,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
 import io.github.collins993.budgettracker2.MainActivity
 import io.github.collins993.budgettracker2.R
-import io.github.collins993.budgettracker2.UserManager
 import io.github.collins993.budgettracker2.databinding.ActivitySignUpBinding
 import io.github.collins993.budgettracker2.models.User
 import io.github.collins993.budgettracker2.utils.Resource
@@ -25,7 +24,7 @@ import kotlinx.coroutines.launch
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
     private lateinit var viewModel: MyViewModel
-    private lateinit var userManager: UserManager
+    val auth = FirebaseAuth.getInstance()
 
     @DelicateCoroutinesApi
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,14 +33,8 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.hide()
-        binding.cardy.setBackgroundResource(R.drawable.top_radius)
+        //binding.cardy.setBackgroundResource(R.drawable.top_radius)
 
-//        val auth = FirebaseAuth.getInstance()
-//        if (auth.currentUser != null){
-//            startActivity(Intent(this, MainActivity::class.java))
-//        }
-
-        userManager = UserManager(this)
         val viewModelProviderFactory = MyViewModelFactory(Application())
         viewModel = ViewModelProvider(this, viewModelProviderFactory).get(MyViewModel::class.java)
 
@@ -55,44 +48,56 @@ class SignUpActivity : AppCompatActivity() {
                 val email = binding.emailAddress.text.toString().trim()
                 val password = binding.password.text.toString().trim()
                 val country = binding.autoCompleteTxt.text.toString()
+                val uid = auth.currentUser?.uid.toString()
+
+                val user = User(username, email, country, uid)
 
                 viewModel.signUp(email,password)
 
 
-//                GlobalScope.launch {
-//                    userManager.storeUser(username, email, country)
-//                }
+
             }
             return@setOnClickListener
 
         }
+//        binding.addUserBtn.setOnClickListener {
+//            val username = binding.username.text.toString().trim()
+//            val email = binding.emailAddress.text.toString().trim()
+//            val country = binding.autoCompleteTxt.text.toString()
+//            val uid = auth.currentUser?.uid.toString()
+//
+//            val user = User(username, email, country, "uid")
+//
+//
+//
+//        }
 
 
 
         observeRegistration()
-        viewModel.addUserStatus.observe(this, {
-            when(it){
-                is Resource.Success -> {
-                    hideProgressBar()
-                    if(it.data.equals("Successfully added user",ignoreCase = true)){
-                        Toast.makeText(this,"Successfully added user",Toast.LENGTH_LONG).show()
+//        viewModel.addUserStatus.observe(this, {
+//            when(it){
+//                is Resource.Success -> {
+//                    hideProgressBar()
+//                    if(it.data.equals("Success",ignoreCase = true)){
+//                        Toast.makeText(this,"Successfully added user",Toast.LENGTH_LONG).show()
+//
+//                    }else{
+//                        Toast.makeText(this,"Failed to add  user with ${it.data}",Toast.LENGTH_LONG).show()
+//                    }
+//                }
+//                is Resource.Error -> {
+//                    hideProgressBar()
+//                    val failedMessage =  it.message ?: "Unknown Error"
+//                    Toast.makeText(this,"Registration failed with $failedMessage",Toast.LENGTH_LONG).show()
+//                }
+//                is Resource.Loading -> {
+//                    showProgressBar()
+//                }
+//            }
+//        })
 
-                    }else{
-                        Toast.makeText(this,"Failed to add  user with ${it.data}",Toast.LENGTH_LONG).show()
-                    }
-                }
-                is Resource.Error -> {
-                    hideProgressBar()
-                    val failedMessage =  it.message ?: "Unknown Error"
-                    Toast.makeText(this,"Registration failed with $failedMessage",Toast.LENGTH_LONG).show()
-                }
-                is Resource.Loading -> {
-                    showProgressBar()
-                }
-            }
-        })
-
-        val currency = resources.getStringArray(R.array.currency)
+        val currency = resources.getStringArray(R.array.currency_codes)
         val arrayAdapter2 = ArrayAdapter(this, R.layout.dropdown_item, currency)
         binding.autoCompleteTxt.setAdapter(arrayAdapter2)
 
@@ -105,14 +110,16 @@ class SignUpActivity : AppCompatActivity() {
                     is Resource.Success ->{
                         hideProgressBar()
                         if(it.data.equals("UserCreated",ignoreCase = true)){
-                            Toast.makeText(this,"Registration Successful User created",Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this,"Registration Successful",Toast.LENGTH_SHORT).show()
                             val username = binding.username.text.toString().trim()
                             val email = binding.emailAddress.text.toString().trim()
                             val country = binding.autoCompleteTxt.text.toString()
-                            var user = User(username,email,country)
-                            viewModel.storeUserInFireBaseDatabase(user)
+                            val uid = auth.currentUser?.uid.toString()
+                            val user = User(username,email,country,uid)
+                            viewModel.addUserInfoToFireStore(user)
                             startActivity(Intent(this, MainActivity::class.java))
                             finish()
+
                         }else{
                             Toast.makeText(this,"Registration failed with ${it.data}",Toast.LENGTH_LONG).show()
                         }

@@ -29,8 +29,7 @@
                 android:id="@+id/welcome_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Welcome Ben 😀"
-                android:textColor="@color/my_purple"
+                android:textColor="@color/black"
                 android:textSize="25sp" />
 
             <androidx.cardview.widget.CardView
@@ -49,19 +48,35 @@
                         android:id="@+id/txt_total_budget_amount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total Budget Amount"
+                        android:text="@string/total_income"
                         android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textSize="20sp" />
 
-                    <TextView
-                        android:id="@+id/amount"
-                        android:textColor="@color/white"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt_total_budget_amount"
-                        android:text="NGN 50,000"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/country_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty2"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -70,9 +85,9 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_toStartOf="@id/fab_add_budget"
-                        android:text="Add new a budget item"
+                        android:text="@string/add_new_a_income_item"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textStyle="italic" />
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -100,9 +115,10 @@
                 android:gravity="center"
                 android:clickable="true"
                 android:textStyle="bold"
-                android:text="see all"
+                android:text="@string/see_all"
+                android:padding="10dp"
                 android:textAllCaps="false"
-                android:textColor="@color/my_purple"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:focusable="true" />
 
@@ -128,19 +144,35 @@
                         android:id="@+id/txt_total_expense_amount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total Expenses"
+                        android:text="@string/total_expenses"
                         android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textSize="20sp" />
 
-                    <TextView
-                        android:id="@+id/expenses_amount"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt_total_expense_amount"
-                        android:text="NGN 27,785"
-                        android:textColor="@color/white"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/country_code_expense"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/expense_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty2"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -149,9 +181,9 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_toStartOf="@id/fab_add_expense"
-                        android:text="What did you spend on ?"
+                        android:text="@string/what_did_you_spend_on"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textStyle="italic" />
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -177,10 +209,11 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:clickable="true"
-                android:text="see all"
+                android:text="@string/see_all"
                 android:textAllCaps="false"
                 android:textStyle="bold"
-                android:textColor="@color/my_purple"
+                android:padding="10dp"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:focusable="true" />
 

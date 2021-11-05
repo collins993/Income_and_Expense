@@ -12,9 +12,9 @@
         android:id="@+id/cardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/circular_bg"
+        android:backgroundTint="@color/black"
         app:cardCornerRadius="100dp"
-        app:contentPadding="20dp"
+        app:contentPadding="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -35,9 +35,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="Welcome"
+        android:text="@string/welcome"
         android:textColor="#000000"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,22 +60,11 @@
         android:id="@+id/button_next"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/my_purple"
+        android:backgroundTint="@color/black"
         android:layout_marginTop="32dp"
-        android:text="NEXT"
+        android:text="@string/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-<!--    <Button-->
-<!--        android:id="@+id/button2"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:text="SKIP"-->
-<!--        android:backgroundTint="@android:color/transparent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/button_next" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,21 +26,9 @@
 
 
     <fragment
-        android:id="@+id/navigation_profile"
-        android:name="io.github.collins993.budgettracker2.ui.profile.ProfileFragment"
-        android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" >
-        <action
-            android:id="@+id/action_navigation_profile_to_resetPasswordFragment"
-            app:destination="@id/resetPasswordFragment" />
-        <action
-            android:id="@+id/action_navigation_profile_to_aboutAppFragment"
-            app:destination="@id/aboutAppFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/addBudgetFragment"
         android:name="io.github.collins993.budgettracker2.homepages.AddBudgetFragment"
-        android:label="add_budget_fragment"
+        android:label="Add Income"
         tools:layout="@layout/add_budget_fragment">
         <action
             android:id="@+id/action_addBudgetFragment_to_navigation_home"
@@ -51,7 +39,7 @@
     <fragment
         android:id="@+id/addExpensesFragment"
         android:name="io.github.collins993.budgettracker2.homepages.AddExpensesFragment"
-        android:label="add_expenses_fragment"
+        android:label="Add Expense"
         tools:layout="@layout/add_expenses_fragment" >
         <action
             android:id="@+id/action_addExpensesFragment_to_navigation_home"
@@ -60,7 +48,7 @@
     <fragment
         android:id="@+id/budgetListFragment"
         android:name="io.github.collins993.budgettracker2.homepages.BudgetListFragment"
-        android:label="budget_list_fragment"
+        android:label="Incomes"
         tools:layout="@layout/budget_list_fragment" >
         <action
             android:id="@+id/action_budgetListFragment_to_navigation_home"
@@ -72,7 +60,7 @@
     <fragment
         android:id="@+id/expenseListFragment"
         android:name="io.github.collins993.budgettracker2.homepages.ExpenseListFragment"
-        android:label="expense_list_fragment"
+        android:label="Expenses"
         tools:layout="@layout/expense_list_fragment" >
         <action
             android:id="@+id/action_expenseListFragment_to_navigation_home"
@@ -96,22 +84,49 @@
     <fragment
         android:id="@+id/resetPasswordFragment"
         android:name="io.github.collins993.budgettracker2.profilepages.ResetPasswordFragment"
-        android:label="fragment_reset_password"
+        android:label="Password Reset"
         tools:layout="@layout/fragment_reset_password" >
         <action
-            android:id="@+id/action_resetPasswordFragment_to_navigation_profile"
-            app:destination="@id/navigation_profile"
-            app:popUpTo="@id/resetPasswordFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_resetPasswordFragment_to_profileSettingsFragment"
+            app:destination="@id/profileSettingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutAppFragment"
         android:name="io.github.collins993.budgettracker2.profilepages.AboutAppFragment"
-        android:label="fragment_about_app"
+        android:label="About app"
         tools:layout="@layout/fragment_about_app" >
         <action
-            android:id="@+id/action_aboutAppFragment_to_navigation_profile"
-            app:destination="@id/navigation_profile" />
+            android:id="@+id/action_aboutAppFragment_to_profileSettingsFragment"
+            app:destination="@id/profileSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileSettingsFragment"
+        android:name="io.github.collins993.budgettracker2.ui.profile.ProfileSettingsFragment"
+        android:label="Settings" >
+        <action
+            android:id="@+id/action_profileSettingsFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+        <action
+            android:id="@+id/action_profileSettingsFragment_to_aboutAppFragment"
+            app:destination="@id/aboutAppFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsFragment2"
+        android:name="io.github.collins993.budgettracker2.ui.statistics.StatisticsFragment"
+        android:label="Statistics"
+        tools:layout="@layout/fragment_statistics">
+        <action
+            android:id="@+id/action_statisticsFragment2_to_expenseStatisticsFragment"
+            app:destination="@id/expenseStatisticsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expenseStatisticsFragment"
+        android:name="io.github.collins993.budgettracker2.ui.statistics.ExpenseStatisticsFragment"
+        android:label="Expense Statistics"
+        tools:layout="@layout/fragment_expense_statistics" >
+        <action
+            android:id="@+id/action_expenseStatisticsFragment_to_statisticsFragment2"
+            app:destination="@id/statisticsFragment2" />
     </fragment>
 
 </navigation>

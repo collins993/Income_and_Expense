@@ -22,9 +22,9 @@
     <Button
         android:id="@+id/button"
         android:layout_width="0dp"
-        android:backgroundTint="@color/my_purple"
+        android:backgroundTint="@color/black"
         android:layout_height="wrap_content"
-        android:text="Get Started"
+        android:text="@string/get_started"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"

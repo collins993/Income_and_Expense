@@ -1,14 +1,20 @@
 package io.github.collins993.budgettracker2
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavDeepLinkBuilder
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import io.github.collins993.budgettracker2.databinding.ActivityMainBinding
+import io.github.collins993.budgettracker2.ui.profile.ProfileSettingsFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_profile
+                R.id.navigation_home,  R.id.statisticsFragment2, R.id.profileSettingsFragment
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -40,9 +46,10 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_profile
+                R.id.navigation_home,  R.id.statisticsFragment2,R.id.profileSettingsFragment
             )
         )
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
 }

@@ -4,12 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/drawable-v24/expense_card_gradient_background.xml" value="0.2" />
+        <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.10833333333333334" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/drawable/bottom_radius.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/drawable/card_gradient_background.xml" value="0.2" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/drawable/expense_card_gradient_background.xml" value="0.2" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/drawable/ic_email.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/drawable/ic_error.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/drawable/ic_home.xml" value="0.16018518518518518" />
+        <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.10833333333333334" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/drawable/ic_password.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/drawable/ic_person.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/drawable/item_background.xml" value="0.2" />
@@ -23,20 +25,28 @@
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/adapter_layout.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/add_budget_fragment.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/add_expenses_fragment.xml" value="0.19895833333333332" />
-        <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/budget_list_fragment.xml" value="0.19895833333333332" />
+        <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/budget_list_fragment.xml" value="0.21" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/dropdown_item.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/expense_list_fragment.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/fragment_about_app.xml" value="0.19895833333333332" />
+        <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/fragment_expense_statistics.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/fragment_home.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/fragment_know_expenses.xml" value="0.14074074074074075" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/fragment_notifications.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/fragment_profile.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/fragment_profile2.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/fragment_reset_password.xml" value="0.19895833333333332" />
+        <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/fragment_statistics.xml" value="0.1" />
+        <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/fragment_statistics2.xml" value="0.18333333333333332" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/fragment_track_budget.xml" value="0.14074074074074075" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/fragment_welcome.xml" value="0.14074074074074075" />
+        <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/layout_maker.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/layout/update_fragment.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19895833333333332" />
+        <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/menu/settings_menu.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_logo.xml" value="0.21510416666666668" />
+        <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_logo_round.xml" value="0.10833333333333334" />
+        <entry key="..\:/Users/MyAccount_locks/Desktop/BudgetTracker2/app/src/main/res/xml/settings.xml" value="0.19895833333333332" />
       </map>
     </option>
   </component>
